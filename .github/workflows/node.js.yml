@@ -21,6 +21,9 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: npm
+      - run: |
+          ls ${{ github.workspace }}
+          cd /server
       - run: npm run start
       - run: sudo apt-get install build-essential
       - run: npm install
