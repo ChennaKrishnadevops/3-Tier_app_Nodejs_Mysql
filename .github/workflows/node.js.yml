@@ -24,4 +24,5 @@ jobs:
       - run: |
           ls ${{ github.workspace }}
           cd /server
+          cp /server/package-lock.json .
       - run: npm run start
