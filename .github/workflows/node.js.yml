@@ -19,7 +19,5 @@ jobs:
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v4
       - run: |
-          ls ${{ github.workspace }}
           cd server
-          ls ${{ github.workspace }}
-          cp server/package-lock.json ./
+      - run: npm install
